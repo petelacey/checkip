@@ -27,4 +27,4 @@ __END__
 </html>
 
 @@ index
-  <p>Current IP Address: <%= ip %></p>
+  <p>Current Internet Protocol Address: <%= ip %></p>
