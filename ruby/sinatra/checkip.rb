@@ -11,7 +11,7 @@ private
 # was required.  So we have this simpler method.
 def ip
   forwarded_ips = @env['HTTP_X_FORWARDED_FOR'] ? @env['HTTP_X_FORWARDED_FOR'].strip.split(/[,\s]+/) : []
-  @env['Client-IP'] || forwarded_ips.last || @env["REMOTE_ADDR"]
+  @env['Client-IP'] || forwarded_ips.last || @env["REMOTE_ADDR"] || "Unkown"
 end
 
 __END__
